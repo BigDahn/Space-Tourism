@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-const Sidebar = ({setOpenSidebar,openSidebar}) => {
+const Sidebar = ({ setOpenSidebar, openSidebar }) => {
   const links = [
     { id: 1, url: '/', text: '00 HOME' },
     { id: 2, url: 'destination', text: ' 01 DESTINATION' },
@@ -19,7 +19,7 @@ const Sidebar = ({setOpenSidebar,openSidebar}) => {
         className="relative top-[2rem] left-[80%] sm:left-[30rem]"
         onClick={() => setOpenSidebar(false)}
       >
-        <img src="/public/assets/shared/icon-close.svg" alt="" />
+        <img src="/assets/shared/icon-close.svg" alt="close" />
       </button>
       <div>
         <ul className="grid gap-8 justify-center mt-40 rounded-sm text-white font-['Barlow Condensed'] ">
