@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-const Sidebar = ({openSidebar}) => {
+const Sidebar = ({setOpenSidebar,openSidebar}) => {
   const links = [
     { id: 1, url: '/', text: '00 HOME' },
     { id: 2, url: 'destination', text: ' 01 DESTINATION' },
@@ -9,10 +9,20 @@ const Sidebar = ({openSidebar}) => {
   ]
   return (
     <div
-      className={` bg-black-norm h-full w-[68%]  fixed top-0 right-0 z-30 backdrop-blur-xl backdrop-filter ${openSidebar ? 'translate-x-0' :'translate-x-full'} ease-in-out delay-700 md:hidden`}
+      className={
+        openSidebar
+          ? ' bg-black-norm h-full w-[68%] overflow-x-hidden fixed top-0 right-0 z-50 backdrop-blur-xl backdrop-filter  md:hidden '
+          : ' bg-black-norm h-full w-[68%] overflow-x-hidden fixed top-0 right-0 z-50 backdrop-blur-xl backdrop-filter md:hidden '
+      }
     >
+      <button
+        className="relative top-[2rem] left-[80%] sm:left-[30rem]"
+        onClick={() => setOpenSidebar(false)}
+      >
+        <img src="/public/assets/shared/icon-close.svg" alt="" />
+      </button>
       <div>
-        <ul className="grid gap-8 justify-center mt-40 sm:mt-[50%] rounded-sm text-white font-['Barlow Condensed'] ">
+        <ul className="grid gap-8 justify-center mt-40 rounded-sm text-white font-['Barlow Condensed'] ">
           {links.map((link) => {
             const { id, url, text } = link
             return (
@@ -28,7 +38,7 @@ const Sidebar = ({openSidebar}) => {
                     }
                   }}
                 >
-                  <p className="hover:underline decoration-2 underline-offset-[10px] ">
+                  <p className="  hover:underline decoration-2 underline-offset-[10px] ">
                     {text}
                   </p>
                 </NavLink>

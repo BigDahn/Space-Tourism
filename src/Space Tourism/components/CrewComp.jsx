@@ -1,36 +1,36 @@
 import { useWindowSize } from '@react-hook/window-size'
-import {crew} from '../data.json'
-import { useState,useEffect} from 'react'
+import { crew } from '../data.json'
+import { useState, useEffect } from 'react'
 
 const CrewComp = () => {
   const [width] = useWindowSize()
-  const[page,setPage] = useState(0)
-  const {name,images,role,bio} = crew[page]
-  const [img,setImg] = useState()
-   useEffect(() => {
-     if (width >= 1114) {
-       setImg(images.webp)
-     } else if (width >= 700) {
-       setImg(images.webp)
-     } else {
-       setImg(images.png)
-     }
-   }, [width, page])
-   const HandleFirstPage = ()=>{
+  const [page, setPage] = useState(0)
+  const { name, images, role, bio } = crew[page]
+  const [img, setImg] = useState()
+  useEffect(() => {
+    if (width >= 1114) {
+      setImg(images.webp)
+    } else if (width >= 700) {
+      setImg(images.webp)
+    } else {
+      setImg(images.png)
+    }
+  }, [width, page])
+  const HandleFirstPage = () => {
     setPage(0)
-   }
-   const HandleSecondPage = () => {
-     setPage(1)
-   }
-   const HandleThirdPage = () => {
-     setPage(2)
-   }
-   const HandleLastPage = () => {
-     setPage(3)
-   }
+  }
+  const HandleSecondPage = () => {
+    setPage(1)
+  }
+  const HandleThirdPage = () => {
+    setPage(2)
+  }
+  const HandleLastPage = () => {
+    setPage(3)
+  }
   return (
     <div className="pt-[8rem]  lg:pt-[16%] ">
-      <h3 className="text-white uppercase align-element text-[1.5rem] sm:text-[1.5rem]">
+      <h3 className="text-white uppercase align-element sm:mt-10 md:mt-0 text-[1.5rem] sm:text-[1.5rem]">
         <span className="pr-2 text-slate-700 font-bold">02</span> MEET YOUR CREW
       </h3>
       <div className=" align-element grid  items-center gap-8 mt-20 justify-center lg:flex justify-between lg:mt-0">
@@ -79,7 +79,7 @@ const CrewComp = () => {
         </div>
         <div>
           <div className="grid justify-center">
-            <img src={img} alt={name}  />
+            <img src={img} alt={name} />
           </div>
         </div>
       </div>

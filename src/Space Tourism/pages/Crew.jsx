@@ -20,7 +20,7 @@ const Crew = () => {
   useEffect(() => {
     ref.current.style.backgroundImage = `url(${img})`
   })
-  return <div className="h-[70rem] sm:h-[130vh] md:h-[130vh] lg:h-full xl:h-[143vh]  bg-no-repeat bg-cover" ref={ref}>
+  return <div className="h-[70rem] sm:h-[136vh] md:h-[130vh] lg:h-full xl:h-[143vh]  bg-no-repeat bg-cover" ref={ref}>
     <CrewComp/>
   </div>
 }
