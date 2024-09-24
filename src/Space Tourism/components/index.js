@@ -1,0 +1,6 @@
+export {default as Navbar} from './Navbar'
+export {default as LandingText} from './LandingText'
+export {default as DestinationComp} from './DestinationComp'
+export {default as CrewComp} from './CrewComp'
+export {default as TechComp} from './TechComp'
+export {default as Sidebar } from './Sidebar'

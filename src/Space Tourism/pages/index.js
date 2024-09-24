@@ -1,0 +1,5 @@
+export {default as HomeLayout} from './Homelayout'
+export {default as Destination} from './Destination'
+export {default as Landing} from './Landing'
+export {default as Crew} from './Crew'
+export {default as Technology} from './Technology'
