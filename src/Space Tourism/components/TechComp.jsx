@@ -26,7 +26,7 @@ const TechComp = () => {
     setPage(2)
   }
   return (
-    <div className=" pt-[9rem] lg:pt-[16%]">
+    <div className="pt-[9rem] lg:pt-[16%]">
       <h3 className="text-white align-element uppercase  text-[1.5rem] sm:text-[1.5rem]">
         <span className="pr-2 text-slate-700 font-bold">03</span> Space launch
         101
@@ -78,11 +78,11 @@ const TechComp = () => {
                 </span>
               </button>
             </div>
-            <div className="align-element grid justify-center text-center mt-8 lg:text-left lg:mt-0">
+            <div className=" align-element grid justify-center text-center mt-8 lg:text-left lg:mt-0">
               <h4 className="text-white uppercase text-[1rem]">
                 The terminology...
               </h4>
-              <div>
+              <div className="">
                 <h2 className="uppercase text-white text-[2rem] sm:text-[3rem] lg:text-[2rem] xl:text-[3rem] font-['Bellefair']">
                   {name}
                 </h2>
@@ -94,7 +94,7 @@ const TechComp = () => {
           </div>
         </div>
         <div className="order-first lg:order-last md:align-element ">
-          <img src={img} alt={name} />
+          <img src={img} alt={name} className="" />
         </div>
       </div>
     </div>

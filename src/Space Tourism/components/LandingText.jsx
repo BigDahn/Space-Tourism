@@ -19,7 +19,7 @@ const LandingText = () => {
           </h6>
         </div>
         <div className="align-element ">
-          <div className="before:absolute before:content-['']  before:transition-all before:block hover:before:rounded-[999px] hover:before:bg-[#ffffff21] hover:before:w-[18rem] hover:before:h-[18rem] hover:before:absolute hover:before:content-[''] hover:before:top-[-3rem] hover:before:left-[-3rem] rounded-[999px] relative top-8 right-[-2rem] h-[12rem] bg-white w-[12rem]  mt-[10%] mr-[4rem]  lg:mr-32 ">
+          <div className="before:absolute before:content-['']  before:transition-all before:block hover:before:rounded-[999px] hover:before:bg-[#ffffff21] hover:before:w-[18rem] hover:before:h-[18rem] hover:before:absolute hover:before:content-[''] hover:before:top-[-3rem] hover:before:transition hover:before:duration-600  hover:before:ease-linear hover:before:delay-[300ms]  hover:before:left-[-3rem] rounded-[999px] relative top-8 right-[-2rem] h-[12rem] bg-white w-[12rem]  mt-[10%] mr-[4rem]  lg:mr-32 ">
             <h4 className="text-black relative top-[4.5rem] left-[3rem] uppercase text-[2rem] cursor-pointer">
               explore
             </h4>

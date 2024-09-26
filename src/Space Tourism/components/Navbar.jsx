@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import Sidebar from './Sidebar'
-import { useState } from 'react'
-
+import { useDispatch } from 'react-redux'
+import { openSidebar } from '../features/Users/userSlice'
 const Navbar = () => {
   const links = [
     { id: 1, url: '/', text: '00 HOME' },
@@ -9,7 +8,8 @@ const Navbar = () => {
     { id: 3, url: 'crew', text: '02 CREW' },
     { id: 4, url: 'technology', text: '03 TECHNOLOGY' },
   ]
-  const [openSidebar, setOpenSidebar] = useState(false)
+  const dispatch = useDispatch()
+  
   return (
     <header className=" ml-4  md:ml-16 lg:ml-10 xl:ml-10 ">
       <nav className="  flex justify-between gap-[17rem] sm:gap-[600px] md:gap-20 lg:gap-[24rem] xl:gap-[18rem]">
@@ -42,10 +42,10 @@ const Navbar = () => {
           })}
         </ul>
 
-        {openSidebar ? null : (
+        
           <button
             className=" mr-3 mt-5 md:hidden"
-            onClick={() => setOpenSidebar(true)}
+            onClick={() => dispatch(openSidebar())}
           >
             <img
               src="/assets/shared/icon-hamburger.svg"
@@ -53,11 +53,8 @@ const Navbar = () => {
               width="40px"
             />
           </button>
-        )}
+       
       </nav>
-      {openSidebar && (
-        <Sidebar openSidebar={openSidebar} setOpenSidebar={setOpenSidebar} />
-      )}
     </header>
   )
 }
